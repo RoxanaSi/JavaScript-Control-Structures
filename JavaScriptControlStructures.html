@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Control Structures</title>
+    <script>
+    /* 1.display in the console the numbers from 1 to 20 */
+        for (n=1; n<=20; n++){
+            console.log(n)
+        } 
+   
+
+    /* 2.display in the console the odd numbers from 1 to 20 */
+        for (m=1; m<=20; m++){
+            if (m%2==0){
+                console.log(m);
+            }
+        }
+
+        
+    /* 3.compute the sum of the elements of an array and display it in the console */
+        function sumOfElements(arr){
+            var suma=0;
+            for (var i=0; i<arr.length; i++){
+                suma +=arr[i];
+             }
+            return suma;
+        }
+
+        console.log(sumOfElements([1,12,33,66,21]))
+            
+
+    /* 4.compute the maximum of the elements of an array and display it in the console */
+        function maximumOfElements(x){
+            for (z=0; z<x.length; z++){
+                var max=0;
+                if (x[z]>max)
+                max = x[z];
+            }
+            return max;
+
+        }
+
+        console.log(maximumOfElements([-5,3,-7,9,2,11,13]))
+
+    /* 5.Compute how many times a certain element appears in an array*/
+        function appearsInArray(a){
+            var countAppears=0;
+            for (j=0; j<=a.length; j++){
+                for (k=j; k<=a.length-1; k++){                
+                    if (a[j]==a[k]){
+                    countAppears++;
+                    }
+                }
+                return countAppears;
+            }
+            
+        }
+
+         console.log(appearsInArray([-5,7,2,-5,3,1,-5,1,3,-5,9]));
+         console.log(appearsInArray([-5,7,2,-5]));
+         console.log(appearsInArray([-5,7,2]));
+        
+    /*6. using nested for generate the following pattern
+           0 1 0 1
+
+           1 0 1 0
+
+           0 1 0 1
+
+           1 0 1 0
+    */
+        for (v=1; v<=4; v++){   
+                var pattern="";
+                var t="0101";
+                var g="1010";
+            for (q=1; q<=v; q++){
+                if (q%2==0){
+                    pattern=g;
+                }
+                else{
+                    pattern=t;
+                }
+            }
+            console.log(pattern);
+        }
+
+    
+       
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
